@@ -1,3 +1,55 @@
-page-home {
+.page-home {
+	.image-slides {
+		margin-bottom: 25px;
+	}
+	.swiper-container {
+
+	}
+	.scroll-content {
+		padding: 0 !important;
+	}
+	.image-slides {
+		height: 200px;
+	}
+	
+	.section {
+		margin-bottom: 25px;
+	}
+	.title {
+	    margin: 20px 0 0 10px;
+	}
+	a {
+		text-decoration: none;
+		margin-right: 10px;
+	}
+	.aff-btn {
+		width: 93%;
+    	margin: 0 10px;
+    	background-color: #782bb5;
+    	color: #fff;
+	}
 
 }
+
+.nav-tool {
+	.cart {
+	    font-size: 1.5em;
+	}
+	.cart-count {
+	    position: relative;
+	    top: -5px;
+	    border-radius: 10px;
+	    padding: 3px;
+	    left: -5px;
+	}
+	.cart-section button {
+		padding: 0;
+		box-shadow: none;
+		background-color: #f8f8f8;
+	}
+	.button-ios {
+		margin-top: 0;
+		height: 2.2em;
+	}
+}
+

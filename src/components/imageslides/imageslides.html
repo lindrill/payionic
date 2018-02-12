@@ -1,0 +1,7 @@
+<div class="image-slides">
+	<ion-slides *ngIf="slidesImgArray && slidesImgArray.length" autoplay="3000" pager="true" loop="true" class="image-slides">
+    <ion-slide *ngFor="let image of slidesImgArray">
+      <img src="{{image.url}}" height="593" width="890"/>
+    </ion-slide>
+  </ion-slides>
+</div>

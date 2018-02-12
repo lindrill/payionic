@@ -1,18 +1,75 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar class="nav-tool">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <div float-left class="search-store">
+      <ion-input type="text" placeholder="Search in store" (click)="searchStore()"></ion-input>
+    </div>
+    <div float-right class="cart-section">
+      <button ion-button color="light">
+        <ion-icon ios="ios-cart" md="md-cart" float-right class="cart"></ion-icon>
+        <ion-badge item-end color="danger" class="cart-count">5</ion-badge>
+      </button>
+    </div>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content padding class="page-home">
+  
+  <ion-slides *ngIf="slidesImgArray && slidesImgArray.length" autoplay="3000" pager="true" loop="true" class="image-slides">
+  <!-- autoplay="5000" loop="true" speed="2000" -->
+    <ion-slide *ngFor="let image of slidesImgArray">
+      <img src="{{image.url}}" height="593" width="890"/>
+    </ion-slide>
+  </ion-slides>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  
+  <div class="section recent-articles">
+    <h5 class="title" float-left>Recent Articles</h5>
+    <a href="#" float-right (click)="openArticlesWebpage('http://affinityccg.wpengine.com/')">SEE MORE</a>
+    <ion-card>
+      <ion-list *ngFor="let article of recentArticles">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/home/slides/slideimg1.jpg">
+          </ion-avatar>
+          <h2>{{ article.title }}</h2>
+          <p>{{ article.content }}</p>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="section image-banners">
+    <ion-card>
+      <img src="assets/imgs/home/slides/slideimg2.jpg"/>
+    </ion-card>
+    <ion-card>
+      <img src="assets/imgs/home/slides/slideimg1.jpg"/>
+    </ion-card>
+  </div>
+  
+
+  <div class="section">
+    <button ion-button color="light" class="aff-btn" (click)="storePage()">Continue to Storefront</button>
+  </div>
+  
+  <div class="footer">
+    <socialmedia></socialmedia>
+    <expandable></expandable>
+    <paymentlogo></paymentlogo>
+    <!-- <ion-list>
+      <ion-item><ion-icon ios="ios-add" md="md-add"></ion-icon> Order Questions</ion-item>
+      <expandable [expandHeight]="itemExpandedHeight" [expanded]="itemExpanded">
+        Hello
+      </expandable>
+    </ion-list> -->
+    
+  </div>
+  <!-- <ion-card>
+    <footer></footer>
+  </ion-card> -->
+  
+  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
 </ion-content>

@@ -1,0 +1,13 @@
+<div float-left class="search-store">
+  <!-- <ion-input type="text" placeholder="Search in store"></ion-input> -->
+
+</div>
+<div float-right class="cart-section">
+	<!-- <button ion-button color="light">Browse All</button> -->
+	<button ion-button color="light"><ion-icon ios="ios-search" md="md-search"></ion-icon></button>
+	<button ion-button color="light" (click)="categorystorePage()"><ion-icon ios="ios-apps" md="md-apps"></ion-icon></button>
+  <button ion-button color="light">
+    <ion-icon ios="ios-cart" md="md-cart" float-right class="cart"></ion-icon>
+    <ion-badge item-end color="danger" class="cart-count">5</ion-badge>
+  </button>
+</div>

@@ -1,0 +1,20 @@
+.social-media {
+	
+	background-color: #e7e7e7;
+
+	ion-col {
+		text-align:center;
+	}
+	ion-icon {
+	    display: inline-block;
+	    font-size: 3.0em;
+	    color: #0e121c;
+	}
+	.logo-facebook, .logo-instagram,  {
+	    margin-left: 50px;
+	}
+	.logo-twitter, .logo-rss {
+		margin-right: 50px !important;
+	}
+}
+	

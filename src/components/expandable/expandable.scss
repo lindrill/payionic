@@ -1,0 +1,12 @@
+expandable {
+	.card-content, card-content, ion-list {
+		padding: 0px 16px;
+		max-height: 0px;
+	}
+	#hide {
+		display: none !important;
+	}
+	#show {
+		display: inline-block;
+	}
+}

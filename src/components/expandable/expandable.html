@@ -1,0 +1,47 @@
+<ion-card>
+	<ion-card-header (click)="toggleAccordion(1)">
+		<ion-icon ios="ios-add" md="md-add" *ngIf="!toggled1"></ion-icon>
+		<ion-icon ios="ios-remove" md="md-remove" *ngIf="expanded && index == 1"></ion-icon>
+		Order Questions
+	</ion-card-header>
+	<ion-card-content #aa>
+		<div class="footer-item-list">
+		  	<button ion-item ion-item (click)="faqsPage()">FAQs
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+		  	<button ion-item (click)="storePolicies()">Store Policies
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+		  	<button ion-item (click)="gradingQuestions()">Grading Questions
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+		  	<button ion-item (click)="termsofUse()">Terms of Use
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+	  	</div>
+	</ion-card-content>
+</ion-card>
+
+<ion-card>
+	<ion-card-header (click)="toggleAccordion(2)">
+		<ion-icon ios="ios-add" md="md-add" *ngIf="toggled2 == false"></ion-icon>
+		<ion-icon ios="ios-remove" md="md-remove" *ngIf="expanded && index == 2"></ion-icon>
+		Organized Play
+	</ion-card-header>
+	<ion-card-content #bb>
+		<div class="footer-item-list">
+		  	<button ion-item (click)="scsIqs()">SCQ IQs
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+		  	<button ion-item (click)="pptQs()">PPT Qs
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+		  	<button ion-item (click)="gpts()">GPTs
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+		  	<button ion-item (click)="grandPrix()">Grand Prix
+		  		<ion-icon md="md-arrow-round-forward" float-right></ion-icon>
+		  	</button>
+	  	</div>
+	</ion-card-content>
+</ion-card>
